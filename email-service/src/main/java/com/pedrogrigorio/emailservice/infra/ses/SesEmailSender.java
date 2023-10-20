@@ -19,9 +19,9 @@ public class SesEmailSender implements EmailSenderGateway {
     }
 
     @Override
-    public void sendEmail(String to, String subject, String body) {
+    public void sendEmail(String from, String to, String subject, String body) {
         SendEmailRequest request = new SendEmailRequest()
-                .withSource("pedroogrigorio@gmail.com")
+                .withSource(from)
                 .withDestination(new Destination().withToAddresses(to))
                 .withMessage(new Message()
                         .withSubject(new Content(subject))
