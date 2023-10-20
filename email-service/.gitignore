@@ -123,6 +123,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 application.properties
 .mvn/timing.properties
+src/main/resources/application.properties
 
 
 ### Grails template
