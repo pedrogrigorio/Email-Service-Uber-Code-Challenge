@@ -1,0 +1,34 @@
+<div class="container">
+  <form class="form-group" [formGroup]="formGroup">
+    <h2>Enviar e-mail</h2>
+
+    <label>
+      <p>Remetente</p>
+      <div>
+        <input placeholder="example@example.com" name="from" formControlName="from">
+      </div>
+    </label>
+
+    <label>
+      <p>Destinatário</p>
+      <div>
+        <input placeholder="example@example.com" name="to" formControlName="to">
+      </div>
+    </label>
+
+    <label>
+      <p>Assunto</p>
+      <div>
+        <input placeholder="subject" name="subject" formControlName="subject"/>
+      </div>
+    </label>
+
+    <label>
+      <p>Mensagem</p>
+      <textarea name="body" formControlName="body"></textarea>
+    </label>
+
+    <!-- <button type="submit" class="submit">Enviar</button> -->
+    <button type="button" (click)="onSubmit()" class="submit">Enviar</button>
+  </form>
+</div>
