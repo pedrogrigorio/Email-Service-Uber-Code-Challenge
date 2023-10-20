@@ -6,10 +6,7 @@ import com.pedrogrigorio.emailservice.core.exceptions.EmailServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/email")
@@ -21,7 +18,12 @@ public class EmailSenderController {
         this.emailSenderService = emailSenderService;
     }
 
-    @PostMapping()
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello, World!";
+    }
+
+    @PostMapping("/send")
     public ResponseEntity<String> sendEmail(@RequestBody EmailRequest request) {
         try {
             this.emailSenderService.sendEmail(request.to(), request.subject(), request.body());
