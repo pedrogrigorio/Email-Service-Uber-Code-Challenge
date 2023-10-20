@@ -1,8 +1,8 @@
 package com.pedrogrigorio.emailservice.application;
 
+import com.pedrogrigorio.emailservice.adapters.EmailSenderGateway;
 import com.pedrogrigorio.emailservice.core.EmailSenderUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.pedrogrigorio.emailservice.adapters.EmailSenderGateway;
 import org.springframework.stereotype.Service;
 
 @Service
